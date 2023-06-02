@@ -33,13 +33,13 @@ public class Main {
                 department = "Books Department";
                 break;
             case 8:
-                department = "";
+                department = "Health and Beauty Department";
                 break;
             case 9:
-                department = "";
+                department = "Decorations Department";
                 break;
             case 10:
-                department = "";
+                department = "Clothing Department";
                 break;
             case 11:
                 department = "";
