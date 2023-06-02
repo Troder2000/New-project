@@ -4,18 +4,18 @@ public class Main {
         System.out.println ("Hello");
     }
     //where should i put this
-    public static int selectDepartment()
+    public static void selectDepartment()
     {
         Scanner myObj = new Scanner(System.in); 
         System.out.println(" 0. ??? Department /t 7. Books Department /n 1. Meat Department /t 8. Health and Beauty Department /n 2. Seafood Department /t 9. Decorations Department /n 3. ");
-        System.out.println("Enter number for department:");
+        System.out.println("Enter number for Department:");
     
         int input = myObj.nextInt(); 
-        String department = "";
+        String department = " ";
         switch (input)
         {
             case 0:
-                department = "??? Department";
+                department = "Yeho Department";
                 break;
             case 1:
                 department = "Meat Department";
@@ -54,7 +54,7 @@ public class Main {
                 department = "Film Department";
                 break;
             default:
-                System.out.println("YOUR FIRED!!!");
+                System.out.println("YOU ARE FIRED!!!");
                 break;
         }
     }
