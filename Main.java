@@ -42,14 +42,15 @@ public class Main {
                 department = "Clothing Department";
                 break;
             case 11:
-                department = "";
+                department = "Technology Department";
                 break;
             case 12:
-                department = "";
+                department = "Film Department";
                 break;
             default:
                 System.out.println("YOUR FIRED!!!");
                 break;
         }
     }
+    
 }
