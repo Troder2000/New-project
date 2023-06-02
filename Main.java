@@ -1,12 +1,18 @@
+import java.util.*;
 public class Main {
     public static void main (String[] args) {
         System.out.println ("Hello");
     }
     //where should i put this
-    public static selectDepartment()
+    public static int selectDepartment()
     {
+        Scanner myObj = new Scanner(System.in); 
+        System.out.println(" 0. ??? Department /t 7. Books Department /n 1. Meat Department /t 8. Health and Beauty Department /n 2. Seafood Department /t 9. Decorations Department /n 3. ");
+        System.out.println("Enter number for department:");
+    
+        int input = myObj.nextInt(); 
         String department = "";
-        switch ()
+        switch (input)
         {
             case 0:
                 department = "??? Department";
