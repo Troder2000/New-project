@@ -1,1 +1,1 @@
-This is the projject READM for Mahir and Arsh and Marcus
+This is the project README for Mihir and Arsh and Marcus
