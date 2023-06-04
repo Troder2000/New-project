@@ -8,6 +8,7 @@ public class Main {
         questions.put("Clothing Department", new String[]{"Halloween is coming up next week. Do you have any spooky scary costumes?", "So, why didn’t skeleton go to the ball? Because he had no body to go with… Now give me a body", "Excuse me, my interview is tomorrow and he expects formal clothing. Where can I find some?"} );
         questions.put("Book Department", new String[] {"Good morning folks, it’s me Jason, here to search for Chicken Doom, the top book of 1983!", "Do you guys have the latest Tears of the Kingdom history book? ", "Pacman! I love that yellow goober. Where can I get a book about Pacman?"});
         questions.put("Medical Department", new String[]{"Hi, so my hand broke, where can I get another one?", "Help!!! This is an emergency! I just had Mexican food this evening and my stomach is turning up. Do you guys have medicine to treat diarrhea?", "HELP! My baby is waking up, do you have any drugs that can get him to sleep?", "Sanitize your hands! Sanitize your hands! Bless it be in the name of sanitization!", "Quick, I am becoming MALD/BALD, do you have any drugs that treat hair loss?"});
+        
         Scanner console = new Scanner(System.in);
         System.out.println("Hello! We at Bofa's All-Purpose Store have reviewed your application, and are pleased to offer you a position as a Sales Associate. Now that you are one of us, what should we call you?");
         String name = console.nextLine();
@@ -27,8 +28,13 @@ public class Main {
 
         boolean end = false;
         while (!end) {
-            
+            Random rand = new Random();
 
+            //Grabs set of keys, converts to array, grabs random element from array, converts it to a String, saves the key
+            String currentKey = questions.keySet().toArray()[rand.nextInt(questions.size())].toString();
+            
+            
+            end = true;
         }
 
         console.close();
