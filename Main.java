@@ -3,7 +3,33 @@ import java.util.*;
 // Mihir Motukuri comment
 public class Main {
     public static void main (String[] args) {
-        System.out.println ("Hello");
+        HashMap<String, String> questions = new HashMap<String, String>();
+        questions.put("Yeho Department", "");
+
+        Scanner console = new Scanner(System.in);
+        System.out.println("Hello! We at Bofa's All-Purpose Store have reviewed your application, and are pleased to offer you a position as a Sales Associate. Now that you are one of us, what should we call you?");
+        String name = console.nextLine();
+        while (name.length() > 8 || name.length() < 2) {
+            if (name.length() > 8) {
+                System.out.print("Inputted name is too long. ");
+            }
+            else if (name.length() < 2) {
+                System.out.print("Inputted name is too short. ");
+            }
+            System.out.println("Please enter a name of length 2-8 characters.");
+            name = console.nextLine();
+        }
+        System.out.println("Ah, " + name + "! Let's stop wasting time, time to prove your skills. You will be in charge of helping customers locate items in our store. Here are our departments:");
+        System.out.println("\nFood department (q)\nTechnology department (w)\nAlcohol department (e)\nBooks department (r)\nMedical department (t)\nClothing department (y)\n");
+        System.out.println("To direct a customer to a department, press its corresponding key as shown above. Ready?");
+
+        boolean end = false;
+        while (!end) {
+            
+
+        }
+
+        console.close();
     }
     //where should i put this
     public static void selectDepartment()
