@@ -1,6 +1,4 @@
 import java.util.*;
-// Arsh Bansal comment
-// Mihir Motukuri comment
 public class Main {
     public static void main (String[] args) {
         HashMap<String, String[]> questions = new HashMap<String, String[]>();
@@ -39,7 +37,7 @@ public class Main {
     public static void selectDepartment()
     {
         Scanner myObj = new Scanner(System.in); 
-        System.out.println(" 0. ??? Department /t 7. Books Department /n 1. Meat Department /t 8. Health and Beauty Department /n 2. Seafood Department /t 9. Decorations Department /n 3. ");
+        System.out.println(" 1. ??? Department /t 7. Books Department /n 1. Meat Department /t 8. Health and Beauty Department /n 2. Seafood Department /t 9. Decorations Department /n 3. ");
         System.out.println("Enter number for Department:");
     
         int input = myObj.nextInt(); 
