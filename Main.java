@@ -3,9 +3,13 @@ import java.util.*;
 // Mihir Motukuri comment
 public class Main {
     public static void main (String[] args) {
-        HashMap<String, String> questions = new HashMap<String, String>();
-        questions.put("Yeho Department", "");
-
+        HashMap<String, String[]> questions = new HashMap<String, String[]>();
+        questions.put("Food Department", new String[]{"Aye amigo, came straight from the biomes, meh. My senorita wants Doritos, meh! Meh Doritos!","Hi, I’m just an elderly old woman with 20 grandkids. Where are the pork chops?", "Do you guys have any fresh fish in stock? My boss is expecting a Mongolian hot pot…","Do you guys have any human meat in stock? My boss wants me to organize a barbecue."});
+        questions.put("Alcohol Department", new String[]{"Hi, it’s date night tonight and my wife wants wine… Wine!", "Take me to the wine store!"});
+        questions.put("Technology Department", new String[]{"Do you, my good friend, know where I can watch Family Guy? ", "Top of the mornin’ to ya lads, it’s me Jacksepticeye, here to find Lois from Family Guy.", "Where can I find the latest Rizzard game?", "So, my boy’s birthday is coming up next week and he’s expecting a big, expensive, exciting gift. Where can I get the pirated version of Legacy of Zelda on the NES and Nintendo? ", "Hi, so my son tossed my computer into the lake off from a 30 story tall skyscraper so um…… where can I get a new computer? ", "Hi, so my son tossed my computer into the lake off from a 30 story tall skyscraper so um…… where can I get a new computer?"});
+        questions.put("Clothing Department", new String[]{"Halloween is coming up next week. Do you have any spooky scary costumes?", "So, why didn’t skeleton go to the ball? Because he had no body to go with… Now give me a body", "Excuse me, my interview is tomorrow and he expects formal clothing. Where can I find some?"} );
+        questions.put("Book Department", new String[] {"Good morning folks, it’s me Jason, here to search for Chicken Doom, the top book of 1983!", "Do you guys have the latest Tears of the Kingdom history book? ", "Pacman! I love that yellow goober. Where can I get a book about Pacman?"});
+        questions.put("Medical Department", new String[]{"Hi, so my hand broke, where can I get another one?", "Help!!! This is an emergency! I just had Mexican food this evening and my stomach is turning up. Do you guys have medicine to treat diarrhea?", "HELP! My baby is waking up, do you have any drugs that can get him to sleep?", "Sanitize your hands! Sanitize your hands! Bless it be in the name of sanitization!", "Quick, I am becoming MALD/BALD, do you have any drugs that treat hair loss?"});
         Scanner console = new Scanner(System.in);
         System.out.println("Hello! We at Bofa's All-Purpose Store have reviewed your application, and are pleased to offer you a position as a Sales Associate. Now that you are one of us, what should we call you?");
         String name = console.nextLine();
