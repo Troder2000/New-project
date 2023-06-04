@@ -20,7 +20,7 @@ public class Main {
             name = console.nextLine();
         }
         System.out.println("Ah, " + name + "! Let's stop wasting time, time to prove your skills. You will be in charge of helping customers locate items in our store. Here are our departments:");
-        System.out.println("\nFood department (q)\nTechnology department (w)\nAlcohol department (e)\nBooks department (r)\nMedical department (t)\nClothing department (y)\n");
+        System.out.println("\nFood department (f)\nTechnology department (t)\nAlcohol department (a)\nBooks department (b)\nMedical department (m)\nClothing department (c)\n");
         System.out.println("To direct a customer to a department, press its corresponding key as shown above. Ready?");
 
         boolean end = false;
