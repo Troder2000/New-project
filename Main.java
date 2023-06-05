@@ -76,7 +76,7 @@ public class Main {
             System.out.println("Community College rejected you.");
         }
         else if(points == 0){
-            System.out.println("124.546.47.123: we know that this your IP address. We are coming to take you for our new special research project");
+            System.out.println("162.78.32.40: we know that this your IP address. We are coming to take you for our new special research project");
         }
     }
 
