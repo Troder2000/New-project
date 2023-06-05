@@ -22,7 +22,7 @@ public class Main {
             System.out.println("Please enter a name of length 2-8 characters.");
             name = console.nextLine();
         }
-        System.out.println("Ah, " + name + "! Let's stop wasting time, time to prove your skills. You will be in charge of helping customers find items in our store. Here are our departments:");
+        System.out.println("Ah, " + name + "! It's time to prove your skills. You will be in charge of helping customers find items in our store. Here are our departments:");
         System.out.println("\nFood department (f)\nTechnology department (t)\nAlcohol department (a)\nBooks department (b)\nMedical department (m)\nClothing department (c)\n");
         System.out.println("To direct a customer to a department, press its corresponding key as shown above.");
 
@@ -47,7 +47,7 @@ public class Main {
 
         console.close();
     }
-    //where should i put this
+
     public static void selectDepartment()
     {
         Scanner myObj = new Scanner(System.in); 
