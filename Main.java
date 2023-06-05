@@ -63,7 +63,16 @@ public class Main {
             System.out.println("Well well well, we have a top scorer here! 50 points! You will be promoted to manager of Bofa!");
         }
         else if (points >= 30) {
-            System.out.println("Nice! Good job. You are a skilled, loyal worker.");
+            System.out.println("Nice! Good job. You are a skilled, loyal proliterate.");
+        }
+        else if (points >= 20){
+            System.out.println("Please think about using your brain.");
+        }
+        else if(points >= 10){
+            System.out.println("Community College rejected you.");
+        }
+        else if(points == 0){
+            System.out.println("124.546.47.123, we know that this your IP address and are coming to take you for our new special research project");
         }
     }
 
