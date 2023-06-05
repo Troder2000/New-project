@@ -33,8 +33,14 @@ public class Main {
             //Grabs set of keys, converts to array, grabs random element from array, converts it to a String, saves the key
             String currentKey = questions.keySet().toArray()[rand.nextInt(questions.size())].toString();
             System.out.println("\nA new customer has arrived!");
+
+            //Grabs corresponding array for question
             String[] keyQuestions = questions.get(currentKey);
+            
+            //Prints random question for the specific key
             System.out.println("\"" + keyQuestions[rand.nextInt(keyQuestions.length)] + "\"");
+
+            
 
             end = true;
         }
