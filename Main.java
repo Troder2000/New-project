@@ -27,6 +27,7 @@ public class Main {
         System.out.println("To direct a customer to a department, press its corresponding key as shown above.");
 
         int points = 0;
+        int customerCount = 0;
         boolean end = false;
         while (!end) {
             Random rand = new Random();
@@ -43,17 +44,27 @@ public class Main {
             System.out.println("Food = f, Tech = t, Alcohol = a, Books = b, Medical = m, Clothing = c");
 
             String answer = checkAnswer(console);
+            customerCount++;
             if (answer.equals(currentKey)) {
                 points += 5;
             }
             
-            if (points >= 30) {
+            if (customerCount == 10) {
                 end = true;
             }
 
         }
 
         console.close();
+
+        System.out.println("\nWell, the day is over. Let's see how you did. I'm checking your employee reviews...");
+
+        if (points == 50) {
+            System.out.println("Well well well, we have a top scorer here! 50 points! You will be promoted to manager of Bofa!");
+        }
+        else if (points >= 30) {
+            System.out.println("Nice! Good job. You are a skilled, loyal worker.");
+        }
     }
 
     public static String checkAnswer(Scanner console)
