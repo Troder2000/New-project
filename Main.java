@@ -26,6 +26,7 @@ public class Main {
         System.out.println("\nFood department (f)\nTechnology department (t)\nAlcohol department (a)\nBooks department (b)\nMedical department (m)\nClothing department (c)\n");
         System.out.println("To direct a customer to a department, press its corresponding key as shown above.");
 
+        int points = 0;
         boolean end = false;
         while (!end) {
             Random rand = new Random();
@@ -34,74 +35,57 @@ public class Main {
             String currentKey = questions.keySet().toArray()[rand.nextInt(questions.size())].toString();
             System.out.println("\nA new customer has arrived!");
 
-            //Grabs corresponding array for question
+            //Grabs corresponding array for key
             String[] keyQuestions = questions.get(currentKey);
             
-            //Prints random question for the specific key
+            //Prints random question for the specific key from its array
             System.out.println("\"" + keyQuestions[rand.nextInt(keyQuestions.length)] + "\"");
-            
+            System.out.println("Food = f, Tech = t, Alcohol = a, Books = b, Medical = m, Clothing = c");
 
+            String answer = checkAnswer(console);
+            if (answer.equals(currentKey)) {
+                points += 5;
+            }
             
+            if (points >= 30) {
+                end = true;
+            }
 
-            end = true;
         }
 
         console.close();
     }
 
-    public static void selectDepartment()
+    public static String checkAnswer(Scanner console)
     {
-        Scanner myObj = new Scanner(System.in); 
-        System.out.println(" 1. ??? Department /t 7. Books Department /n 1. Meat Department /t 8. Health and Beauty Department /n 2. Seafood Department /t 9. Decorations Department /n 3. ");
-        System.out.println("Enter number for Department:");
-    
-        int input = myObj.nextInt(); 
-        String department = " ";
-        switch (input)
-        {
-            case 0:
-                department = "Yeho Department";
-                break;
-            case 1:
-                department = "Meat Department";
-                break;
-            case 2:
-                department = "Seafood Department";
-                break;
-            case 3:
-                department = "Fruit Department";
-                break; 
-            case 4:
-                department = "Snack Department";
-                break; 
-            case 5:
-                department = "Wine and Beer Department";
-                break;
-            case 6:
-                department = "Medical Department";
-                break;
-            case 7:
-                department = "Books Department";
-                break;
-            case 8:
-                department = "Health and Beauty Department";
-                break;
-            case 9:
-                department = "Decorations Department";
-                break;
-            case 10:
-                department = "Clothing Department";
-                break;
-            case 11:
-                department = "Technology Department";
-                break;
-            case 12:
-                department = "Film Department";
-                break;
-            default:
-                System.out.println("YOU ARE FIRED!!!");
-                break;
+
+        String answer = console.nextLine().toLowerCase();
+
+        // Avoids nullpointerexception
+        if (answer == null) {
+            return "";
         }
+        
+
+        switch (answer)
+        {
+            case "f":
+                return "Food Department";
+            case "t":
+                return "Technology Department";
+            case "a":
+                return "Alcohol Department";
+            case "b":
+                return "Books Department";
+            case "m":
+                return "Medical Department";
+            case "c":
+                return "Clothing Department";
+            default:
+                return "";
+        }
+
+
     }
     
 }
