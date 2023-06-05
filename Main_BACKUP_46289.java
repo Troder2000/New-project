@@ -40,11 +40,7 @@ public class Main {
             
             //Prints random question for the specific key from its array
             System.out.println("\"" + keyQuestions[rand.nextInt(keyQuestions.length)] + "\"");
-<<<<<<< HEAD
-            
-=======
             System.out.println("Food = f, Tech = t, Alcohol = a, Books = b, Medical = m, Clothing = c");
->>>>>>> c93b984 (added more to game, redesigned method. Game is functional now.)
 
             String answer = checkAnswer(console);
             if (answer.equals(currentKey)) {
@@ -59,13 +55,7 @@ public class Main {
 
         console.close();
     }
-<<<<<<< HEAD
-
-    public static void selectDepartment()
-=======
-    //where should i put this
     public static String checkAnswer(Scanner console)
->>>>>>> c93b984 (added more to game, redesigned method. Game is functional now.)
     {
 
         String answer = console.nextLine().toLowerCase();
