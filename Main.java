@@ -9,6 +9,8 @@ public class Main {
         questions.put("Books Department", new String[] {"Good morning folks, it’s me Jason, here to search for Chicken Doom, the top book of 1983! Where is it?", "Oooh I just love murder. Where can I find a AH a book about murder?", "Where can I get the latest news?", "Do you guys have the latest Tears of the Kingdom history book?", "Pacman! I love that yellow goober. Where can I get a book about Pacman?", "Do you guys have any anime in stock?", "Can I get a good book for my Sorenson book project and the sparknotes with it", "Hey bum, do you offer this book in e-book format?"});
         questions.put("Medical Department", new String[]{"UGH... my pancreas is in pain?", "Do you have any medication that can knock me up for a late night hour? If so, where can I find it", "I want something hot. I want something cold. I don't feel good, I feel sick. Its edible and its liquid I think? What am I looking for?", "OMG like oh my gawd, my date is expecting me to look hot tonight? Do you know where I can get like the Beauty and Health lotion?", "Hi, so my hand broke, where can I get another one?", "Help!!! This is an emergency! I just had Mexican food this evening and my stomach is turning up. Do you guys have medicine to treat diarrhea?", "HELP! My baby is waking up, do you have any drugs that can get him to sleep?", "Sanitize your hands! Sanitize your hands! Bless it be in the name of sanitization! Where can I find holy hand sanitizer?", "Quick, I am becoming MALD/BALD, do you have any drugs that treat hair loss?","Should I buy this aspirin to stop mushroom fungus growth in my brain?", "Can you teach my how to tie a band"});
         
+        //int health = 3;
+        //int boss_health = 300; 
 
         Scanner console = new Scanner(System.in);
         System.out.println("Hello! We at Bofa's All-Purpose Store have reviewed your application, and are pleased to offer you a position as a Sales Associate. Now that you are one of us, what should we call you?");
@@ -65,7 +67,24 @@ public class Main {
         System.out.println("\nWell, the day is over. Let's see how you did. I'm checking your employee reviews...");
 
         if (points == 50) {
-            System.out.println("Well well well, we have a top scorer here! 50 points! You will be promoted to manager of Bofa!");
+            System.out.println("Well well well, we have a top scorer here! 50 points! You will be promoted to manager of Bofa, but to become a five star manager like me, you must defeat me!!!");
+            if ()
+            {
+                System.out.println("Where do you put my car keys after you're done moving the latest stock to the aisles");
+                String response = console.nextLine();
+                if (response == "")
+                {
+                    System.out.println()
+                }
+                else
+                {
+                    System.out.println("YOUR FIRED!!!");
+                }
+            }
+            else
+            {
+                System.out.println("YOUR FIRED!!!");
+            }
         }
         else if (points >= 30) {
             System.out.println("Nice! Good job. You are a skilled, loyal proletariat.");
