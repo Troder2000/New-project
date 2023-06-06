@@ -66,26 +66,11 @@ public class Main {
 
         if (points == 50) {
             System.out.println("Well well well, we have a top scorer here! 50 points! You will be promoted to manager of Bofa, but to become a five star manager like me, you must defeat Arsh!!!");
-            System.out.println("Where do you put my car keys after you're done moving the latest stock to the aisles?");
+            System.out.println("Are you smarter than Will Barber?");
             String response = console.nextLine().toLowerCase().trim();
-                if (response.equals("In the sink")){   
-                    System.out.println("3 more questions!");
-                    System.out.println("\nWhat college did I go to?");
-                    response = console.nextLine().toLowerCase().trim();
-                    if (response.equals("YWCS")){
-                        System.out.println("You are a literal genius");
-                        System.out.println("\nWhat's the meaning of life?");
-                        response = console.nextLine().toLowerCase().trim();
-                        if (response.equals("To eat a bunch of food")){
-                            System.out.println("Well said.");
-                            System.out.println("\nAre you as smart as Will Barber?");
-                            response = console.nextLine().toLowerCase().trim();
-                            if(response.equals("No")){
-                                System.out.println("Good, no one is smarter than him.");
-                                System.out.println();
-                            }
-                        }
-                    }
+                if (response.equals("No")){   
+                    System.out.println("You are smarter than lil will.");
+                    
                 }
                 else {
                     System.out.println("YOUR FIRED!!!");
@@ -118,11 +103,7 @@ public class Main {
 
         String answer = console.nextLine().toLowerCase().trim();
 
-        // Avoids nullpointerexception
-        if (answer == null) {
-            return "";
-        }
-
+    
         switch (answer) {
             case "f":
                 return "Food Department";
