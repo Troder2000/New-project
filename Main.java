@@ -62,18 +62,17 @@ public class Main implements java.io.Serializable{
         }
 
 
-        System.out.println("\nWell, the day is over. Let's see how you did. I'm checking your employee reviews...");
+        System.out.println("\nWell, the day is over. Let's see how you did. I'm checking the employee reviews...");
 
         if (points == 50) {
-            System.out.println("Well well well, we have a top scorer here! 50 points! You will be promoted to manager of Bofa, but to become a five star manager like me, you must defeat Arsh!!!");
-            System.out.println("Are you smarter than Will Barber?");
+            System.out.println("Well well well, we have a top scorer here! 50 points! You will be promoted to manager of Bofa, but as the last step, you must defeat Arsh, the incumbent.");
+            System.out.println("\nYou only have one question to answer. Are you smarter than Will Barber?");
             String response = console.nextLine().toLowerCase().trim();
                 if (response.equals("No")){   
-                    System.out.println("You are smarter than lil will.");
-                    
+                    System.out.println("You are smarter than Lil Will.");
                 }
                 else {
-                    System.out.println("YOUR FIRED!!!");
+                    System.out.println("YOU'RE FIRED!!!");
                 }
             }
         
