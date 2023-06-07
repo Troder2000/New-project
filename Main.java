@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+public class Main implements java.io.Serializable{
     public static void main (String[] args) {
         HashMap<String, String[]> questions = new HashMap<String, String[]>();
         questions.put("Food Department", new String[]{"OH BOY! ITS A ME, PIZZA BOY! HOT! DO YOU GOT A 'ZA FOR ME! I'M GETTING HUNGRY LOOKIN AT CHA, BUD! I don't get paid enough for this, please!", "Its the Pepsi Man. I'm as thirsty as heck, do you have any Pepsi for me?", "Hi, its me... your wife, Candice. You've been missing over an year, now. Where are you? Don't you love your family anymore? Don't you love me?", "This is the mortuary, any corpses for me to deliver?", "Hands up! This is the police, where are you hiding the [white cheese pizza]?", "Help, my son! He's sick! Do you have any chicken noodles?", "Aye amigo, came straight from the biomes, meh. My senorita wants Doritos, meh! Meh Doritos! Where can I find them?", "HELP! IVE BEEN STUCK ON THIS CAR RIDE FOR 20 HOURS WITHOUT FOOD! I CAN'T LIVE WITHOUT SNACKS, WHERE ARE THE SNACKS AT?", "Hi, I’m just an elderly old woman with 20 grandkids. Where are the pork chops?", "Do you guys have any fresh fish in stock? My boss is expecting a Mongolian hot pot…","Do you guys have any human meat in stock? My boss wants me to organize a barbecue.", "Avez-vous des huîtres à la maison ce soir ? Où puis-je trouver des huîtres, du poisson et des homards?"});
@@ -125,3 +125,7 @@ public class Main {
     }
     
 }
+
+
+
+
