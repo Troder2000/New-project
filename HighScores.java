@@ -9,7 +9,7 @@ public class HighScores {
 
     public void addScore(UserScore u){
         int i = 0;
-        for (i = 0; i <HighScores.size(); i++){
+        for (i = 0; i <highScores.size(); i++){
             if (u.getScore() > highScores.get(i).getScore()){
                 break;
             }
