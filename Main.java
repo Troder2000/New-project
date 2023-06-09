@@ -1,6 +1,9 @@
 import java.util.*;
+import java.io.*;
+
 public class Main implements java.io.Serializable{
     public static void main (String[] args) {
+
         HashMap<String, String[]> questions = new HashMap<String, String[]>();
         questions.put("Food Department", new String[]{"OH BOY! ITS A ME, PIZZA BOY! HOT! DO YOU GOT A 'ZA FOR ME! I'M GETTING HUNGRY LOOKIN AT CHA, BUD! I don't get paid enough for this, please!", "Its the Pepsi Man. I'm as thirsty as heck, do you have any Pepsi for me?", "Hi, its me... your wife, Candice. You've been missing over an year, now. Where are you? Don't you love your family anymore? Don't you love me?", "This is the mortuary, any corpses for me to deliver?", "Hands up! This is the police, where are you hiding the [white cheese pizza]?", "Help, my son! He's sick! Do you have any chicken noodles?", "Aye amigo, came straight from the biomes, meh. My senorita wants Doritos, meh! Meh Doritos! Where can I find them?", "HELP! IVE BEEN STUCK ON THIS CAR RIDE FOR 20 HOURS WITHOUT FOOD! I CAN'T LIVE WITHOUT SNACKS, WHERE ARE THE SNACKS AT?", "Hi, I’m just an elderly old woman with 20 grandkids. Where are the pork chops?", "Do you guys have any fresh fish in stock? My boss is expecting a Mongolian hot pot…","Do you guys have any human meat in stock? My boss wants me to organize a barbecue.", "Avez-vous des huîtres à la maison ce soir ? Où puis-je trouver des huîtres, du poisson et des homards?"});
         questions.put("Alcohol Department", new String[]{ "After a wild police chase on a Thursday night in Bellevue, the 35 year old male suspect [SUBJECT_06] was found [dEaD] at the [WINE_DEPARTMENT] in [l0cAt!0N_NAmE]. The death of the suspect remains unclear- [Where is the grape wine?]", "HI! JUST RAN 100 MPH PASSED THE SPEED LIMIT! THE COPS ARE AFTER ME! YOU NEED TO HIDE ME! WHERE IS THE WINE DEPARTMENT?", "Hi, it’s date night tonight and my wife wants wine… Wine!", "Take me to the beer. Where can I get beer!!!", "HANDS UP! Where are you hiding the red wine?", "After a wild police chase on a Thursday night in Bellevue, the 35 year old male suspect [SUBJECT_06] was found [dEaD] at the [WINE_DEPARTMENT] in [l0cAt!0N_NAmE]. The death of the suspect remains unclear- [Where is the grape wine?]"});
@@ -69,8 +72,9 @@ public class Main implements java.io.Serializable{
             System.out.println("Well well well, we have a top scorer here! 50 points! You will be promoted to manager of Bofa, but as the last step, you must defeat Arsh, the incumbent.");
             System.out.println("\nYou only have one question to answer. Are you smarter than Will Barber?");
             String response = console.nextLine().toLowerCase().trim();
-                if (response.equals("No")){   
-                    System.out.println("You are smarter than Lil Will.");
+                if (response.equals("no")){   
+                    //Inside joke - class might think lil will is Bobby Barber - removing
+                    System.out.println("You truly are a wise one. Congratulations!");
                 }
                 else {
                     System.out.println("YOU'RE FIRED!!!");
@@ -90,14 +94,94 @@ public class Main implements java.io.Serializable{
             System.out.println("162.78.32.40: we know that this your IP address. We are coming to take you for our new special research project");
         }
 
+        //Read existing Leaderboard data from file and deserialize
+        HighScores leaderboard = deserialize();
 
+        // Create UserScore object to current user
+        UserScore u = new UserScore(name, points);
 
+        // Add current user to Leaderboard if they qualify
+        leaderboard.addUser(u);
 
+        //System.out.println(leaderboard.getUser(0));
+        //System.out.println("calling serialize method");
 
+        // Save updated Leaderboard to file after serialization
+        serialize(leaderboard);
+
+        System.out.println("Here is the Leaderboard");
+        System.out.println(leaderboard);    
 
         console.close();
 
     }
+
+    public static HighScores deserialize() {
+        String fileName = "leaderboard.ser";
+        try {
+
+            HighScores leaderboard;
+
+            //This automatically creates file if it doesn't exist
+            FileInputStream file = new FileInputStream(fileName);
+            ObjectInputStream in = new ObjectInputStream(file);
+            //System.out.println("Trying to read file");
+            
+            //System.out.println(file.available());
+            if (file.available()==0)
+            {
+                //System.out.println("File is Empty");
+                leaderboard = new HighScores();
+            }
+            else
+            {
+                //System.out.println("File was not Empty");
+
+            // Method for serializing object
+            leaderboard = (HighScores) in.readObject();
+            }
+
+            in.close();
+            file.close();
+
+            //System.out.println("Object has been deserialized ");   
+            return leaderboard;         
+        }
+        catch(IOException ex) {
+            //System.out.println(ex.getMessage());
+            System.out.println("IO EXCEPTION");
+        }
+        catch(ClassNotFoundException ex) {
+            //System.out.println(ex.getMessage());
+            System.out.println("CLASS NOT FOUND");
+        }
+    
+        return new HighScores();
+    }
+    
+
+
+    public static void serialize(HighScores leaderboard) {
+        String fileName = "leaderboard.ser";
+
+        try{
+        //This automatically creates file if it doesn't exist
+            FileOutputStream file = new FileOutputStream(fileName);
+            ObjectOutputStream out = new ObjectOutputStream(file);
+           // System.out.println("Trying to write to file");
+
+            // Method for serializing object
+            out.writeObject(leaderboard);
+            out.close();
+            file.close();
+        }
+        catch(IOException ex) {
+            //System.out.println(ex.getMessage());
+            System.out.println("IO EXCEPTION");
+        }
+
+    }
+    
 
     public static String checkAnswer(Scanner console) {
 

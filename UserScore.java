@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class UserScore{
+public class UserScore implements java.io.Serializable {
     private String name;
     private int score;
 

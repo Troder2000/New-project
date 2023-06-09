@@ -1,13 +1,15 @@
 import java.util.*;
 
-public class HighScores {
+public class HighScores implements java.io.Serializable{
     private ArrayList<UserScore> highScores;
 
     public HighScores(){
+        // If arraylist already exists in file, get it
+        // If not, create new
         highScores = new ArrayList<UserScore>();
     }
 
-    public void addScore(UserScore u){
+    public void addUser(UserScore u){
         int i = 0;
         for (i = 0; i <highScores.size(); i++){
             if (u.getScore() > highScores.get(i).getScore()){
@@ -21,6 +23,11 @@ public class HighScores {
         }
 
     }
+
+    public UserScore getUser(int index) {
+        return highScores.get(index);
+    }
+
     public String toString() {
         String toString = "";
         for (int i = 0; i <highScores.size(); i++){
